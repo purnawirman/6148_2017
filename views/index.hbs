@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/base.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/js/ajax.js"></script>
+  </head>
+  <body>
+    <h1 class="workshop-name">6.148 Day 4 MongoDB Workshop</h1>
+    <div class="content">
+      <h1>{{ title }} Form</h1>
+      <form name="adduser" method="post" action="/adduser">
+        <ul>
+          <li>Username</li>
+
+          <li><input type="text" placeholder="Username" name="username"></li>
+
+          <li>Favorite Fruit</li>
+
+          <li><input type="text" placeholder="Favorite Fruit" name="userfruit"></li>
+
+          <li><button type="submit">Submit</button></li>
+        </ul>
+      </form>
+      <form name="deleteuser" method="post" action="/deleteuser">
+        <ul>
+          <li>User to Delete</li>
+
+          <li><input type="text" placeholder="Username" name="username"></li>
+
+          <li><button type="submit">Submit</button></li>
+        </ul>
+      </form>
+
+      <ul>
+        <li>User to Find</li>
+        <li><input type="text" placeholder="Username" class="find"></li>
+        <li><button type="submit" class="find-submit">Submit</button></li>
+        <li><p class="find-output"></p></li>
+      </ul>
+
+      <a href="/userlist">See userlist</a>
+    </div>
+  </body>
+</html>
